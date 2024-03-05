@@ -25,7 +25,7 @@
     max-width: 400px; 
     }
   /* Animation for top circle */
-  #top-circle{
+  #asterisk-large{
     animation: color-shift-top 7s infinite;
 }
 
@@ -33,15 +33,20 @@
   @keyframes color-shift-top{
 
         0%, 100%{
-            fill:rgb(44, 212, 201);
+            fill:rgb(212, 103, 44);
+            transform: scale(.5);
+            transform-origin: center;
             }
             50%{
-                fill:rgb(13, 190, 107);
+                fill:rgb(0, 0, 0);
+                transform: scale(.8);
+                opacity: .5
+              ;
             }
         }
 
   /* Animation for middle circle */
-  #middle-circle{
+  #asterisk-medium{
     animation: color-shift-middle 7s infinite;
 }
 
@@ -56,17 +61,19 @@
         }
     
   /* Animation for bottom circle */
-  #bottom-circle{
+  #asterisk-small{
     animation: color-shift-bottom 7s infinite;
 }
 
   @keyframes color-shift-bottom{
 
-        0%, 100%{
+        0%, 50%{
             fill:red
             }
-            50%{
+            100%{
                 fill:rgb(234, 242, 6);
+                transform: scale(.4);
+                transform-origin: center;
             }
         }
 
